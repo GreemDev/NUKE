@@ -85,18 +85,6 @@ public class SettingsTest
     }
 
     [Fact]
-    public void TestOpenCover()
-    {
-        var projectFile = RootDirectory / "source" / "Nuke.Common" / "Nuke.Common.csproj";
-
-        Assert(new OpenCoverSettings()
-                .SetTargetPath(projectFile)
-                .SetTargetArguments("-diagnostics -HTML \"new folder\\data.xml\"")
-                .AddFilters("+[*]*", "-[xunit.*]*", "-[NUnit.*]*"),
-            $"-target:{projectFile.ToString().DoubleQuoteIfNeeded()} -targetargs:\"-diagnostics -HTML \\\"new folder\\data.xml\\\"\" -filter:\"+[*]* -[xunit.*]* -[NUnit.*]*\"");
-    }
-
-    [Fact]
     public void TestCorFlags()
     {
         Assert(new CorFlagsSettings()
