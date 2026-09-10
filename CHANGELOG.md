@@ -35,6 +35,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 - **Project Maintenance**
+  - chore: Updated the .NET SDK Docker image versions used in some workflow generators 
   - chore: Regenerated `GreemDev.Nuke.Components.Forgejo` Kiota API client for [Forgejo v15](https://forgejo.org/2026-04-release-v15-0/).
   - chore: The `Configuration.cs` file generated with a new GRUKE build script from the global tool now [has readonly members](https://github.com/gruke-build/src/commit/6a6dc2d17b620f7ac8da9f287dc3bb9c2c80d864).
   - [gruke-build/src#8](https://github.com/gruke-build/src/pull/8): Added [Renovate bot](https://github.com/apps/renovate) to update dependencies automatically.

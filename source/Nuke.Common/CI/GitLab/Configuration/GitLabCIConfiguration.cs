@@ -29,11 +29,6 @@ public class GitLabCIConfiguration : ConfigurationEntity
 
     public override void Write(CustomFileWriter writer)
     {
-        if (UseDocker && DockerImage == null && DotNetDockerImages.LookupCurrent(out var dockerImage))
-        {
-            DockerImage = dockerImage;
-        }
-
         if (UseDocker)
             writer.WriteLine($"image: {DockerImage}");
 

@@ -22,7 +22,7 @@ public class GitLabCIAttribute : ConfigurationAttributeBase
 
     public bool RecurseSubmodules { get; set; }
 
-    [CanBeNull] public string DockerImage { get; set; }
+    [CanBeNull] public string DockerImage { get; set; } = DotNetDockerImages.ForCurrentRuntime;
 
     public string[] InvokedTargets { get; set; } = [];
 
