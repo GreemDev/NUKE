@@ -12,6 +12,7 @@ using static Nuke.Common.ControlFlow;
 
 [GitLabCI(
     InvokedTargets = [nameof(IPublish.Publish)],
+    DockerImage = "mcr.microsoft.com/dotnet/sdk:10.0.201",
     UploadProducedArtifacts = true,
     ExcludedArtifacts = [ "output/packages/*.nupkg" ],
     OnlyOnPushesToBranches = [ default ]
